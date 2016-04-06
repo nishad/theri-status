@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <!-- Basic Page Needs –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta charset="utf-8">
+        <title>
+            Zone Status
+        </title>
+        <meta content="" name="description">
+        <meta content="" name="author">
+
+        <!-- Mobile Specific Metas –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        
+        <!-- FONT –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+        <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link href="assets/css/normalize.css" rel="stylesheet" type='text/css'>
+        <link href="assets/css/skeleton.css" rel="stylesheet" type='text/css'>
+        <link href='assets/css/metricsgraphics.css' rel='stylesheet' type='text/css'>
+        <link href='assets/css/app.css?v=0.0.1' rel='stylesheet' type='text/css'>
+
+        <!-- Favicon –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link href="assets/images/favicon.png" rel="icon" type="image/png">
+
+    </head>
+    <body>
+        <!-- Primary Page Layout –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <div class="container main">
+
+        <!-- Page Title –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <div class="row">
+            <h4 class="caps" id="title"></h4>
+            <h5 id="updatedon"></h5>
+        </div>
+            <hr>
+
+            <!-- Basic Analytics –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+            <div class="row">
+                <div class="one-third column">
+                    <h6 class="sumlabel caps">
+                        Unique Visitors
+                    </h6>
+                    <h1 class="sum totalvisitors" id="visitors"></h1>
+                </div>
+                <div class="one-third column">
+                    <h6 class="sumlabel caps">
+                        Requests Served
+                    </h6>
+                    <h1 class="sum totalrequests" id="requests"></h1>
+                </div>
+                <div class="one-third column">
+                    <h6 class="sumlabel caps">
+                        Page Views
+                    </h6>
+                    <h1 class="sum data" id="pageviews"></h1>
+                </div>
+            </div>
+            <hr>
+
+            <!-- Basic Status –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+            <div class="row">
+                <div class="one-third column">
+                    <h6 class="sublabel caps">
+                        Origin
+                    </h6>
+                    <h1 class="status" id="origin-server"></h1>
+                </div> 
+                <div class="one-third column">
+                    <h6 class="sublabel caps">
+                        CDN
+                    </h6>
+                    <h1 class="status" id="cdn-status"></h1>
+                </div>
+                <div class="one-third column">
+                    <h6 class="sublabel caps">
+                        Availability
+                    </h6>
+                    <h1 class="status" id="availability"></h1>
+                </div>
+            </div>
+            <hr>
+
+            <!-- Unique visitors Graph –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+            <div class="row">
+                <h5 class="caps">
+                    Unique visitors in past 48 hours
+                </h5>
+                <div class="u-max-full-width" id="visits"></div>
+            </div>
+            <hr>
+
+            <!-- Traffic Origins –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+            <div class="row">
+                <h5 class="caps">
+                    Top Traffic Origins
+                </h5>
+                <div class="u-max-full-width" id="country">
+                    <table class="u-full-width" id="countries">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Country Code
+                                </th>
+                                <th>
+                                    Country
+                                </th>
+                                <th>
+                                    Requests
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row footer">
+                <pre><code id="realtimestamp"></code></pre>
+            </div>
+
+        </div>
+                
+                <!-- JS  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+                <script charset='utf-8' type="text/javascript" src='assets/js/pace.min.js?v0.0.1'></script>
+                <script charset='utf-8' type="text/javascript" src='assets/js/jquery.min.js'></script>
+                <script charset='utf-8' type="text/javascript" src='assets/js/d3.min.js'></script>
+                <script charset='utf-8' type="text/javascript" src='assets/js/metricsgraphics.min.js'></script>
+                <script charset='utf-8' type="text/javascript" src='assets/js/moment.min.js'></script>
+                <script charset='utf-8' type="text/javascript" src='assets/js/filesize.min.js'></script>
+                <script charset='utf-8' type="text/javascript" src='assets/js/jquery.number.min.js'></script>
+                <script charset='utf-8' type="text/javascript" src='assets/js/app.js?v0.0.1'></script>
+
+    </body>
+</html>
