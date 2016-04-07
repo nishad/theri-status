@@ -13,7 +13,7 @@
                     }
 
 
-                    $.getJSON( "https://api.rimpo.in/cloud/v3/status/?special=false&key=public&minimal=true&json=true&zone=theri.rimpo.in", {_: new Date().getTime()}, function(alldata) {
+                    $.getJSON( "https://api.rimpo.in/cloud/v3/status/?special=false&key=public&minimal=true&colors=true&json=true&zone=theri.rimpo.in", {_: new Date().getTime()}, function(alldata) {
                     
                          console.log('JSON loaded');
                          
@@ -50,9 +50,16 @@
                          $("#requests").text($.number(alldata['requests']));
                          $("#updatedon").text('Updated ' + moment(alldata['timestamp']).fromNow());
                          $("#title").text('Status for zone ' + alldata['zone']);
-                         $("#origin-server").text(alldata['originstatus']);
-                         $("#cdn-status").text(alldata['cdnstatus']);
-                         $("#availability").text(alldata['availability']);
+
+                         $("#origin-server").text(alldata['originstatus']['status']);
+                         $("#origin-server").css('color', alldata['originstatus']['indication']);
+
+                         $("#cdn-status").text(alldata['cdnstatus']['status']);
+                         $("#cdn-status").css('color', alldata['cdnstatus']['indication']);
+
+                         $("#availability").text(alldata['availability']['status'] + alldata['availability']['value']);
+                         $("#availability").css('color', alldata['availability']['indication']);
+
                          $("#realtimestamp").text('Time stamp : '+alldata['timestamp']);
 
 
